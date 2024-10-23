@@ -7,12 +7,12 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -24,4 +24,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  h1 {
+    @apply mt-12 text-3xl px-10 font-bold;
+  }
+}
+
+.header {
+  @apply flex gap-3.5 p-10 h-7 sticky;
+}
+
+.header a {
+  @apply no-underline hover:underline;
+}
+/* 
+.page {
+  @apply;
+} */
+
+.body {
+  @apply flex gap-10  p-10 min-h-[calc(100vh-80px)];
 }
